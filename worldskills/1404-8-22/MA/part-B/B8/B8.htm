@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 90vh;
+                background: #414141;
+            }
+            .star {
+                position: relative;
+                display: block;
+                color: gold;
+                width: 100px;
+                height: 100px;
+                clip-path: polygon(
+                    50% 0%,
+                    60% 35%,
+                    100% 35%,
+                    70% 60%,
+                    80% 90%,
+                    50% 70%,
+                    20% 90%,
+                    30% 57%,
+                    2% 35%,
+                    40% 35%
+                );
+                background: gold;
+                animation: rotate 3s linear infinite;
+            }
+            @keyframes rotate {
+                0% { transform: rotate(0deg);}
+                100% { transform: rotate(360deg);}
+            }
+        </style>
+    </head>
+    <body>
+        <div class="star"></div>
+    </body>
+</html>

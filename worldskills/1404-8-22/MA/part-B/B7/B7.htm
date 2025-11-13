@@ -1,0 +1,148 @@
+<html>
+    <head>
+        <style>
+            body{
+                min-height: 100vh;
+                width: 100%;
+            }
+            .countainer{
+                border: 1px solid #ccc;
+                border-radius: 50px;
+                min-height: 700px;
+                width: 1300px;
+                display: flex;
+                justify-content: center;
+                position: relative;
+                margin: 50px auto;
+            }
+            .circle{
+                border-radius: 10000px;
+                overflow: hidden; 
+                display: flex;
+                width: 300px;
+                height: 300px;
+                transform: rotate(-65deg); 
+                margin: auto auto;
+                position: relative;
+            }
+            .circle > .blue{
+                background: rgb(4, 4, 173);
+                width: 50%;
+            }
+            .circle > .red{
+                background: red;
+                width: 50%;
+            }
+            .circleRed{
+                width: 155px;
+                height: 155px;
+                border-radius: 200px;
+                position: absolute;
+                left: 80px;
+                top: -5px;
+                background: red;
+            }
+            .circleBlue{
+                width: 155px;
+                height: 155px;
+                border-radius: 200px;
+                position: absolute;
+                right: 80px;
+                bottom: -5px;
+                background: rgb(4, 4, 173);
+            }
+            .lineHolder{
+                display: flex;
+                flex-flow: column wrap;
+                gap: 15px;
+                width: 250px;
+                position: absolute;
+            }
+            .fullLine{
+                height: 30px;
+                background: #000;
+            }
+            .halfLineCountainer{
+                display: flex;
+                gap: 15px;
+            }
+            .halfLine{
+                width: 100%;
+                height: 30px;
+                background: #000;
+            }
+            #L1{
+                top: 100px;
+                right: 100px;
+                transform: rotate(45deg); 
+            }
+            #L2{
+                bottom: 100px;
+                right: 100px;
+                transform: rotate(-45deg); 
+            }
+            #L3{
+                top: 100px;
+                left: 100px;
+                transform: rotate(-45deg); 
+            }
+            #L4{
+                bottom: 100px;
+                left: 100px;
+                transform: rotate(45deg); 
+            }
+        </style>
+    </head>
+    <body>
+        <div class="countainer">
+            <div class="circle">
+                <div class="blue">
+                    <div class="circleRed"></div>
+                </div>
+                <div class="red">
+                    <div class="circleBlue"></div>
+                </div>
+            </div>
+
+
+            <div id="L1" class="lineHolder">
+                <div class="halfLineCountainer">
+                    <span class="halfLine"></span> 
+                    <span class="halfLine"></span>
+                </div>
+                <span class="fullLine"></span>
+                <div class="halfLineCountainer">
+                    <span class="halfLine"></span> 
+                    <span class="halfLine"></span>
+                </div>
+            </div>
+            <div id="L2" class="lineHolder">
+                <div class="halfLineCountainer">
+                    <span class="halfLine"></span> 
+                    <span class="halfLine"></span>
+                </div>
+                <div class="halfLineCountainer">
+                    <span class="halfLine"></span> 
+                    <span class="halfLine"></span>
+                </div>
+                <div class="halfLineCountainer">
+                    <span class="halfLine"></span> 
+                    <span class="halfLine"></span>
+                </div>
+            </div>
+            <div id="L3" class="lineHolder">
+                <span class="fullLine"></span>
+                <span class="fullLine"></span>
+                <span class="fullLine"></span>
+            </div>  
+            <div id="L4" class="lineHolder">
+                <span class="fullLine"></span>
+                <div class="halfLineCountainer">
+                    <span class="halfLine"></span> 
+                    <span class="halfLine"></span>
+                </div>
+                <span class="fullLine"></span>
+            </div>                       
+        </div>
+    </body>
+</html>

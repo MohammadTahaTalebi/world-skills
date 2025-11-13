@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Green Light</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      .signal {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        background-color: #222;
+        height: 200px;
+        width: 90px;
+        border-radius: 75px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 0;
+      }
+
+        .light {
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        opacity: 0.2;
+        animation-iteration-count: infinite;
+        }
+
+        .red {
+        background-color: #f00;
+        animation-name: redC;
+        animation-duration: 8s;
+        }
+
+        .orange {
+        background-color: rgb(240, 174, 33);
+        animation-name: orangeC;
+        animation-duration: 8s;
+        }
+
+        .green {
+        background-color: rgb(80, 214, 26);
+        animation-name: greenC;
+        animation-duration: 8s;
+        }
+
+        @keyframes greenC {
+        0%, 49.9% { opacity: 1; }      
+        50%, 100% { opacity: 0.2; }     
+        }
+
+        @keyframes orangeC {
+        0%, 49.9%, 62.49% { opacity: 0.2; } 
+        50%, 62.49% { opacity: 1; }          
+        62.5%, 100% { opacity: 0.2; }          
+        }
+
+        @keyframes redC {
+        0%, 62.49% { opacity: 0.2; }     
+        62.5%, 100% { opacity: 1; }     
+        }
+
+      .pillar {
+        width: 15px;
+        height: 300px;
+        background-color: #222;
+        position: relative;
+        top: -3px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="signal">
+      <div class="container">
+        <div class="light red"></div>
+        <div class="light orange"></div>
+        <div class="light green"></div>
+      </div>
+
+      <div class="pillar"></div>
+    </div>
+  </body>
+</html>

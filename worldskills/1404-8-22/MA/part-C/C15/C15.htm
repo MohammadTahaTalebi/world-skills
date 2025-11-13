@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <style>
+            body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-size: 2rem;
+            transition: background-color 0.3s, color 0.3s;
+            }
+            body.light {
+            background-color: #ffffff;
+            color: #000000;
+            }
+            body.night {
+            background-color: #000000;
+            color: #ffffff;
+            }
+            .controls {
+            position: absolute;
+            top: 20px;
+            display: flex;
+            gap: 10px;
+            }
+            button {
+            padding: 8px 16px;
+            font-size: 1rem;
+            cursor: pointer;
+            border: 1px solid #888;
+            border-radius: 5px;
+            background-color: #747474;
+            transition: background 0.3s;
+            color: white;
+            }
+
+        </style>
+    </head>
+    <body class="light">
+        <div class="controls">
+            <button id="lightBtn">Light</button>
+            <button id="nightBtn">Night</button>
+        </div>
+        <div id="text">Hello world!</div>
+        <script>
+            const body = document.body;
+            const text = document.getElementById('text');
+            const lightBtn = document.getElementById('lightBtn');
+            const nightBtn = document.getElementById('nightBtn');
+
+            lightBtn.addEventListener('click', () => {
+            body.classList.remove('night');
+            body.classList.add('light');
+            });
+
+            nightBtn.addEventListener('click', () => {
+            body.classList.remove('light');
+            body.classList.add('night');
+            });
+        </script>
+    </body>
+</html>
