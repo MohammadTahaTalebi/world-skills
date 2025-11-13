@@ -1,0 +1,147 @@
+body{
+    background: #010d24;
+    color: #11ff00;
+    margin: 0;
+    margin-top: 50px;
+    padding: 0;
+}
+.header{
+    height: 50px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background: #00050e;
+    border-bottom: 1px solid #11ff004f;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    z-index: 1000000000;
+}
+.header > a{
+    margin: auto 0;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    appearance: none;
+}
+#main{
+    display: flex;
+    flex-flow: column wrap;
+    gap: 50px;
+    padding: 0 100px;
+}
+
+.hero-section{
+    height: calc(100vh - 50px);
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+.hero-section > .title{
+    font-size: 60px;
+}
+.hero-section > .subtitle{
+    font-size: 30px;
+    opacity: 50%;
+    margin-bottom: 70px;
+}
+.CTABtn{
+    background: #3681a7;
+    padding: 15px 30px;
+    border-radius: 100px;
+    border: 1px solid rgb(159, 212, 255);
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+}
+.holderFlex{
+    display: flex;
+    gap: 30px;
+}
+.features{
+    height: 400px;
+}
+
+#features input[type="radio"] {
+  display: none;
+}
+
+.feature-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.feature-buttons label {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.feature-content {
+  display: none;
+  border: 1px solid #11ff00;
+  border-radius: 20px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  height: 400px;
+}
+
+#feature1:checked ~ .feature-buttons ~ .feature-content.feature1,
+#feature2:checked ~ .feature-buttons ~ .feature-content.feature2,
+#feature3:checked ~ .feature-buttons ~ .feature-content.feature3,
+#feature4:checked ~ .feature-buttons ~ .feature-content.feature4 {
+  display: block;
+}
+
+
+#feature1:checked ~ .feature-buttons > #feature1-label,
+#feature2:checked ~ .feature-buttons > #feature2-label,
+#feature3:checked ~ .feature-buttons > #feature3-label,
+#feature4:checked ~ .feature-buttons > #feature4-label {
+  border: 1px dashed #11ff00;
+}
+
+#parent-company, .eco-title{
+
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+#parent-company > h2, .eco-title > h2{
+    font-size: 40px;
+    margin: 0;
+}
+#parent-company > p, .eco-title > p{
+    font-size: 20px;
+    opacity: 70%;
+}
+.eco-content{
+    margin-top: 70px;
+    border-radius: 20px;
+    border: 1px solid #11ff00;
+    height: 400px;
+}
+
+.footer{
+    height: 50px;
+    background: #00050e;
+    border-top: 1px solid #11ff004f;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
