@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end; 
+            }
+
+            .ball {
+                width: 80px;
+                height: 80px;
+                background: rgb(0, 81, 255);
+                border-radius: 1000px;
+                animation: Jump 2s infinite; 
+                margin-bottom: 120px; 
+            }
+
+            @keyframes Jump {
+                0% {
+                    transform: translateY(0);
+                }
+                55% {
+                    transform: translateY(-400px); 
+                }
+                100% {
+                    transform: translateY(0);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ball"></div>
+    </body>
+</html>

@@ -1,0 +1,96 @@
+<html>
+
+<head>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: 600;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .rectangle {
+      width: 400px;
+      height: 200px;
+      background: #063497;
+      margin-bottom: 20px;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 30px;
+    }
+
+    label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    input[type="range"] {
+      width: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="rectangle" id="rectangle">
+      <label>
+        Border Radius:
+        <input type="range" id="radius" min="0" max="100" value="0">
+      </label>
+
+      <label>
+        Box Shadow X:
+        <input type="range" id="shadowX" min="-50" max="50" value="0">
+      </label>
+
+      <label>
+        Box Shadow Y:
+        <input type="range" id="shadowY" min="-50" max="50" value="0">
+      </label>
+
+      <label>
+        Box Shadow Blur:
+        <input type="range" id="shadowBlur" min="0" max="50" value="10">
+      </label>
+
+      <label>
+        Box Shadow Color:
+        <input type="color" id="shadowColor" value="#000000">
+      </label>
+    </div>
+  </div>
+
+  <script>
+    const rectangle = document.getElementById('rectangle');
+    const radius = document.getElementById('radius');
+    const shadowX = document.getElementById('shadowX');
+    const shadowY = document.getElementById('shadowY');
+    const shadowBlur = document.getElementById('shadowBlur');
+    const shadowColor = document.getElementById('shadowColor');
+
+    function updateRectangleClass() {
+      rectangle.style.borderRadius = radius.value + 'px';
+      rectangle.style.boxShadow = `${shadowX.value}px ${shadowY.value}px ${shadowBlur.value}px ${shadowColor.value}`;
+    }
+
+    radius.addEventListener('input', updateRectangleClass);
+    shadowX.addEventListener('input', updateRectangleClass);
+    shadowY.addEventListener('input', updateRectangleClass);
+    shadowBlur.addEventListener('input', updateRectangleClass);
+    shadowColor.addEventListener('input', updateRectangleClass);
+  </script>
+</body>
+
+</html>

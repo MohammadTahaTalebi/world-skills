@@ -1,0 +1,152 @@
+<html>
+
+<head>
+    <style>
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            font-family: Arial, sans-serif;
+            background: #f3f3f3;
+            display: flex;
+            justify-content: center;
+        }
+
+        .Countainer {
+            max-width: 760px;
+            width: 100%;
+            text-align: center;
+        }
+
+        #colorBox {
+            width: 100%;
+            height: 320px;
+            background: rgb(181, 116, 157);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            border: 1px solid #ccc;
+            transition: .15s;
+        }
+
+        #colorText {
+            font-size: 26px;
+            font-weight: 500;
+        }
+
+        .sliders {
+            width: 100%;
+        }
+
+        .sliderRow {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .sliderLabel {
+            width: 40px;
+            text-align: right;
+            font-weight: bold;
+        }
+
+        .sliderRow > input[type=range] {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 100%;
+            height: 8px;
+            background: #eee;
+            border-radius: 4px;
+            outline: none;
+            border: 1px solid #999;
+            box-shadow: 1px 1px 1px 0px #000;
+        }
+
+        .sliderRow > input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 22px;
+            height: 32px;
+            border-radius: 4px;
+            background: #fff;
+            border: 2px solid #000;
+            cursor: pointer;
+        }
+
+        .sliderRow > input[type=range]::-moz-range-thumb {
+            width: 22px;
+            height: 32px;
+            border-radius: 4px;
+            background: #fff;
+            border: 2px solid #000;
+            cursor: pointer;
+            box-shadow: 1px 1px 1px 0px #000;
+        }
+
+        .sliderValue {
+            width: 40px;
+            font-family: monospace;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Countainer">
+        <div id="colorBox">
+            <span id="colorText">rgb(181,116,157)</span>
+        </div>
+
+        <div class="sliders">
+            <div class="sliderRow">
+                <span class="sliderLabel">R</span>
+                <input id="redSlider" type="range" min="0" max="255" value="181">
+                <span id="redValue" class="sliderValue">181</span>
+            </div>
+
+            <div class="sliderRow">
+                <span class="sliderLabel">G</span>
+                <input id="greenSlider" type="range" min="0" max="255" value="116">
+                <span id="greenValue" class="sliderValue">116</span>
+            </div>
+
+            <div class="sliderRow">
+                <span class="sliderLabel">B</span>
+                <input id="blueSlider" type="range" min="0" max="255" value="157">
+                <span id="blueValue" class="sliderValue">157</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const redSlider = document.getElementById('redSlider')
+        const greenSlider = document.getElementById('greenSlider')
+        const blueSlider = document.getElementById('blueSlider')
+        const redValue = document.getElementById('redValue')
+        const greenValue = document.getElementById('greenValue')
+        const blueValue = document.getElementById('blueValue')
+        const colorBox = document.getElementById('colorBox')
+        const colorText = document.getElementById('colorText')
+
+        function updateColor() {
+            const r = parseInt(redSlider.value)
+            const g = parseInt(greenSlider.value)
+            const b = parseInt(blueSlider.value)
+            const rgbString = `rgb(${r},${g},${b})`
+            colorBox.style.backgroundColor = rgbString
+            colorText.textContent = rgbString
+            redValue.textContent = r
+            greenValue.textContent = g
+            blueValue.textContent = b
+        }
+
+        [redSlider, greenSlider, blueSlider].forEach(s => {
+            s.addEventListener('input', updateColor)
+        })
+
+        updateColor()
+    </script>
+</body>
+
+</html>

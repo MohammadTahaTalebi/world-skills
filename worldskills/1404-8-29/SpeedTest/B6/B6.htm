@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .TriangleToSquare {
+                width: 200px;
+                height: 200px;
+                background: blue;
+                clip-path: polygon(50% 0%, 50% 0%, 0% 100%, 100% 100%); 
+                animation: TriangleToSquareAnim 4s infinite alternate ease-in-out;
+            }
+
+            @keyframes TriangleToSquareAnim {
+                0% {
+                    clip-path: polygon(50% 0%, 50% 0%, 0% 100%, 100% 100%);
+                    background: blue;
+                }
+                100% {
+                    clip-path: polygon(0% 0%, 0% 100%, 100% 100%, 100% 0%); 
+                    background: yellow;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="TriangleToSquare"></div>
+    </body>
+</html>

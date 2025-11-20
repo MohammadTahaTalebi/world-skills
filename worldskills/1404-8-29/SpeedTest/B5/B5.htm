@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+            body {
+                margin: 0;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .SquareToCircle {
+                width: 200px;
+                height: 200px;
+                background: yellow;
+                border-radius: 0;
+                animation: SquareToCircleAnim 4s infinite alternate ease-in-out;
+            }
+
+            @keyframes SquareToCircleAnim {
+                0% {
+                    width: 200px;
+                    height: 200px;
+                    background: yellow;
+                    border-radius: 0%;
+                }
+                100% {
+                    width: 100px;
+                    height: 100px;
+                    background: red;
+                    border-radius: 50%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="SquareToCircle"></div>
+    </body>
+</html>

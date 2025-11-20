@@ -1,0 +1,116 @@
+<html>
+    <head>
+        <style>
+            body{
+                margin: 0;
+                padding: 0;
+                font-size: 24px;
+            }
+            .header{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+                height: 100px;
+                margin-bottom: 8px;
+            }
+            .header > .left{
+                background: rgb(238, 238, 15);
+            }
+            .header > .right{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 8px;
+            }
+            .header > .right > span{
+                background: #ffb8f4;
+            }
+
+
+            .content{
+                display: flex;
+                gap: 8px;
+            }
+            .content > .right{
+                width: 25%;
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 8px;
+            }
+            .content > .right > span{
+                background-color: rgb(0, 119, 255);
+                width: 100%;
+                height: 180px;
+                
+            }
+
+            .content > .left{
+                width: 75%;
+                display: flex;
+                flex-flow: column wrap;
+                gap: 8px;
+            }
+            .content > .left > span{
+                background: #00d9ff;
+                height: 50px;
+            }
+            .content > .left > div{
+                display: flex;
+                gap: 8px;
+            }
+            .content > .left > div > span{
+                height: 100%;
+                background: #77ff00;
+                width: 30%;
+            }
+            .content > .left > div > div{
+                display: flex;
+                flex-flow: column wrap;
+                gap: 8px;
+                width: 70%;
+            }
+            .content > .left > div > div > span{
+                height: 245px;
+                background: #ff878d;
+                width: 100%;
+            }
+            .footer{
+                background: #5a5959;
+                height: 50px;
+                color: white;
+                margin-top: 8px;
+            }
+
+
+
+            
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <div class="left">Site Title</div>
+            <div class="right">
+                <span>Nav 1</span>
+                <span>Nav 2</span>
+                <span>Nav 3</span>
+            </div>
+        </header>
+        <main class="content">
+            <div class="left">
+                <span>Post Title</span>
+                <div>
+                    <span>Post Meta</span>
+                    <div>
+                        <span>Main Content</span>
+                        <span>Main Content Image</span>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <span>Side Bar</span>
+                <span>Ads</span>
+                <span>Other Stuffs</span>
+            </div>
+        </main>
+        <footer class="footer">@2018 footer</footer>
+    </body>
+</html>
